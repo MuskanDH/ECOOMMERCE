@@ -1,8 +1,8 @@
 // ignore_for_file: unused_import
 
 import 'package:flutter/material.dart';
-import 'package:firstproject/LoginScreen.dart'; 
-import 'package:firstproject/SignupScreen.dart';
+import 'package:firstproject/LoginScreen.dart'; // Make sure you import your LoginScreen class
+import 'package:firstproject/SignupScreen.dart'; // Make sure you import your SignupScreen class
 
 class SplashScreen extends StatelessWidget {
   SplashScreen({Key? key}) : super(key: key);
