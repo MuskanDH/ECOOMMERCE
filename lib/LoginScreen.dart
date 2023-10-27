@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print, unnecessary_brace_in_string_interps, prefer_const_constructors, use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 import 'package:firstproject/forgetscreen.dart';
 import 'package:firstproject/homescreen.dart';
@@ -79,8 +81,14 @@ class LoginView extends StatelessWidget {
             const SizedBox(height: 50),
             TextField(
               controller: emailController,
-              decoration: const InputDecoration(
+              decoration: InputDecoration(
                 prefixIcon: Icon(Icons.email),
+                suffixIcon: IconButton(
+                  icon: Icon(Icons.check), // You can change this to your desired icon
+                  onPressed: () {
+                    // Add your logic when the tick mark button is pressed for the email field
+                  },
+                ),
                 border: OutlineInputBorder(),
                 hintText: "Email Address",
               ),
@@ -89,11 +97,17 @@ class LoginView extends StatelessWidget {
             TextField(
               controller: passwordController,
               obscureText: true,
-              decoration: const InputDecoration(
-                  suffixIcon: Icon(Icons.visibility),
-                  prefixIcon: Icon(Icons.lock),
-                  hintText: "Password",
-                  border: OutlineInputBorder()),
+              decoration: InputDecoration(
+                prefixIcon: Icon(Icons.lock),
+                suffixIcon: IconButton(
+                  icon: Icon(Icons.check), // You can change this to your desired icon
+                  onPressed: () {
+                    // Add your logic when the tick mark button is pressed for the password field
+                  },
+                ),
+                hintText: "Password",
+                border: OutlineInputBorder(),
+              ),
             ),
             InkWell(
               onTap: () {
