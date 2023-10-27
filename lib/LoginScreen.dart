@@ -1,13 +1,18 @@
 // ignore_for_file: avoid_print, unnecessary_brace_in_string_interps, prefer_const_constructors, use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
-import 'package:firstproject/forgetscreen.dart';
+import "package:firstproject/forgetscreen.dart";
 import 'package:firstproject/homescreen.dart';
-import 'package:firstproject/signupscreen.dart';
+import 'package:firstproject/signupScreen.dart';
 
-class LoginView extends StatelessWidget {
+class LoginView extends StatefulWidget {
   const LoginView({Key? key});
 
+  @override
+  State<LoginView> createState() => _LoginViewState();
+}
+
+class _LoginViewState extends State<LoginView> {
   onLoginPressed(BuildContext context, TextEditingController memail, TextEditingController password) {
     String email = memail.text;
     if (email.contains("@") && email.contains(".com")) {
