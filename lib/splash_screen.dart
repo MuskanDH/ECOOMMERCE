@@ -1,23 +1,16 @@
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: unused_import
 
 import 'package:flutter/material.dart';
+import 'package:firstproject/LoginScreen.dart'; 
+import 'package:firstproject/SignupScreen.dart';
 
 class SplashScreen extends StatelessWidget {
-  const SplashScreen({Key? key}) : super(key: key);
+  SplashScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    // Simulate a delay before navigating to the login screen
-    Future.delayed(const Duration(seconds: 2), () {
-      // Navigate to the login screen
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => LoginScreen()),
-      );
-    });
-
     return Scaffold(
-      body: SingleChildScrollView( // Wrap with SingleChildScrollView
+      body: SingleChildScrollView(
         child: Stack(
           children: [
             Center(
@@ -30,7 +23,6 @@ class SplashScreen extends StatelessWidget {
                     height: MediaQuery.of(context).size.height,
                     fit: BoxFit.cover,
                   ),
-                  // Add this Center widget with Column
                   const Center(
                     child: Column(
                       children: [
@@ -94,8 +86,10 @@ class SplashScreen extends StatelessWidget {
       ),
     );
   }
-  
-  SignupScreen() {}
-  
-  LoginScreen() {}
+}
+
+class SignupScreen {
+}
+
+class LoginScreen {
 }
